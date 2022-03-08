@@ -65,16 +65,16 @@ void LinkedList::insertNode(double newValue)
 			nodePtr = nodePtr->next;
 		}
 		
-		if(prevNode == nullptr) // Needs to be == not =
+		if(prevNode == nullptr) 
 		{
 			head = newNode;
-			newNode->next = nodePtr; // I had this: nodePtr = newNode->next;
+			newNode->next = nodePtr; 
 		}
 		
 		else
 		{
-		prevNode->next = newNode; // I had this: newNode = prevNode->next;
-		newNode->next = nodePtr;  // I had this: nodePtr = newNode->next;   LEARN WHY THIS HAPPENED
+		prevNode->next = newNode;
+		newNode->next = nodePtr;  
 		}
 	}
 }
@@ -136,10 +136,10 @@ void LinkedList::reverseList()
 	
 	while(curr != nullptr)
 	{
-		temp = curr->next;
+		next = curr->next;
 		curr->next = prev;
 		prev = curr;
-		curr = temp;
+		curr = next;
 	}
 	head = prev;
 }	
